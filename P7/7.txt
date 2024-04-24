@@ -1,0 +1,70 @@
+1) Open netbeans 7.4
+2) select file > new project > java web > web application > next 
+   > peoject name : Assignment 7 > server :GlassFish sserver 4.1.1 
+   > Java ee version : Java ee7 web > next > finish
+3) Then click on project name > select new > Web service
+4) service name : My CalculatorWebService > Package : com.myservice > select web service from scracth
+   > Finish
+5) Select MyCalculatorWebServices > right click > select add operations
+6) name : addition > Return type : double > parameters > add >
+num1 : double >
+num2 : double >
+ok
+7) Then select design word above the code > select add operations and add sub, mul, div
+
+8) In code for add, sub, mul, div --- type return num1+num2; and further
+9) Then select Project name assignment7 > select build > output in output window
+10) Then select Project name assignment7 > select deploy
+11)Then select Project name MyCalculatorwebService > select test web series
+
+12) Then again select Assignmen7
+
+13) Selcet file > new project > java web > web applicaion > next
+    > project_name : CalculatorwebServiceClient > next > next > next
+14) Now in CalculatorwebServiceClient project > index.html
+15) select windows > ide tool > palate
+16) in index.html
+	add
+from palate select form and drag in the body section
+Action : CalculatorServlet
+method : get
+ok
+frm created
+
+wite
+title> Calculator web Service Cliet</
+<form action="CalculatorServlet">
+enter Number1 : <input type="text name="number1" value=""/>  <br>
+enter Number2 : <input type="text name="number2" value=""/>  <br>
+
+<input typ="Submit" value='Submit" />
+</form>
+
+17) Select CalculatorWebSrviceccclient > right click > new > Web service client 
+18) In this seletc
+	Project > browse > select assignment7 > MyCalculatorwebService > ok
+	Package > select default > finish
+19) copy CalculatorServlet
+20) Select CalculatorWebServiceClient > right click > new  Servlet
+	Client name : paste CalculatorServlet  > next >
+		Select check box add information to deployment > finish
+
+21) now in open code on window scroll down > add below code before last curly bracket
+	Drag addition , mul,div,sub from Servlet folder
+22) scroll above the code till out.println("<h1><servlet calulator at " +request.getContextPath()+ " </h1>
+23) add the code below try loop
+	double num1, num2;
+	num1 = double.parseDouble(request.getparameter("number1"))
+
+	num2 = double.parseDouble(request.getparameter("number2"))
+
+from line in 22
+add
+"<h1>Addition is : +addition(num1,num2)+ "</h1>
+copy for sub,mul,div
+
+also change the title as Calculator Servlet Output
+
+24) select CaculatorWebServiceClien > right click> clean and build
+25) select CaculatorWebServiceClien > wb pages > index.html  (form created ealier)
+26) right click on code and selec run
