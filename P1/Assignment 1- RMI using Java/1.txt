@@ -1,0 +1,12 @@
+Ass 1
+
+1) Create Client.java file and paste the client code in it.
+2) Create Server.java file and paste the Server code in it.
+3) Then in cmd, cd file name (path of the file)
+4) first run the server file as
+	javac Server.java
+	java Server
+
+5) Then run the client file as
+	javac Client.java
+	java Client
